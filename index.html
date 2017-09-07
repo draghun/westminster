@@ -7,302 +7,597 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+  }
+
+  body,
+  html {
     height: 100%;
     color: #777;
     line-height: 1.8;
-}
+  }
+  /* Create a Parallax Effect */
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3,
+  .bgimg-4 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+  }
+  /* First image (Logo. Full height) */
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
+  .bgimg-1 {
     background-image: url('main-banner.jpeg');
-    min-height: 100%;
-}
+    min-height: 400px;
+  }
+  /* Second image (Portfolio) */
 
-/* Second image (Portfolio) */
-.bgimg-2 {
+  .bgimg-2 {
     background-image: url("banner-balloon.jpeg");
     min-height: 400px;
-}
+  }
+  /* Third image (Contact) */
 
-/* Third image (Contact) */
-.bgimg-3 {
+  .bgimg-3 {
     background-image: url("banner-two.jpeg");
     min-height: 400px;
-}
+  }
 
-.bgimg-4 {
-    background-image: url("banner-three.jpeg");
-    background-size: cover;
+  .bgimg-4 {
+    background-image: url("aboutus.jpeg");
     min-height: 400px;
-}
+  }
 
-.bgimg-5 {
-    background-image: url("banner-four.jpeg");
-    background-size: cover;
-    min-height: 400px;
-}
+  .w3-wide {
+    letter-spacing: 10px;
+  }
 
-.bgimg-6 {
-    background-image: url("banner-five.jpeg");
-    background-size: cover;
-    min-height: 400px;
-}
+  .w3-hover-opacity {
+    cursor: pointer;
+  }
+  /* Turn off parallax scrolling for tablets and phones */
 
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4 {
+      background-attachment: scroll;
     }
-}
+  }
 </style>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()"
+        title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#services" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SERVICES</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#services" class="w3-bar-item w3-button" onclick="toggleFunction()">SERVICES</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WESTMINSTER <span class="w3-hide-small">MORTGAGE </span>GROUP</span>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT US</h3>
-  <p class="w3-center"></p>
-  <p>We are a licensed Wholesale Lender committed to broker and correspondent lending. We are experts in locating the best mortgage for your individual circumstances. We have extensive experience in the Jumbo, Super Jumbo, conforming mortgage, and particularly specialized in niche products. We can help you secure a residential mortgage loan, even if you have bad credit history or challenging circumstances. We pride ourselves upon finding the best mortgage for you in the shortest possible time, plus making the experience as hassle-free as possible.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>CALVIN "VIN" WILKINSON</b></p><br>
-      <img src="calvin.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Calvin" width="500" height="333">
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="#services" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SERVICES</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      </a>
     </div>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Calvin “Vin” Wilkinson is focused on reclaiming the American Dream, restoring a sense of common purpose, and realizing that no obstacles can withstand the power of millions of voices pursuing their dreams. Calvin studied business at The College of William & Mary where he developed and taught new and innovative ways to optimize home lending. Since then, Calvin Wilkinson’s efficient, fast, and flexible home lending process has been responsible for providing over $1 billion in loans to those pursuing their dreams.
-            <br>
-            Calvin Wilkinson started working in the finance industry just over five years ago.As a young man out of school, Calvin was motivated by a single, simple, powerful, idea – that he might play a small part in building a better American Dream.
-            <br>
-            In pursuit of his mission, Calvin rebuilt neighborhoods destroyed by economic downturn and erected homes in cities famous for being among the most prestigious in the world. It was through these experiences that he saw all that is America converge – farmers and teachers, businessmen and laborers, doctors and lawyers, all of them with a story to tell, all of them seeking a seat at the table, all of them seeking the American Dream. After a time, he began to understand that our cherished desire to live the American Dream depended on the active participation of awakened professionals. It was with these ideologies and principles in mind that he ascended as a leading voice in the finance industry.
-            <br>
-            Join Calvin to take up the unfinished business of perfecting your American Dream. If you will join him in this quest and share his vision that the time is now to shake off our slumber and fear, then we will build a better American Dream for ourselves and future generations. Calvin is ready to take up the cause, and march with you. Together, starting today, let us finish the work that needs to be done, and usher in a new birth of freedom in your life.
-            <br>
-            Calvin is a licensed loan officer in the states of Georgia, Alabama, Florida, Colorado, and Texas. 
-            <br>
-            NMLS# 1587533</p>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#services" class="w3-bar-item w3-button" onclick="toggleFunction()">SERVICES</a>
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     </div>
   </div>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>QUENTIN JEFFERIES</b></p><br>
-      <img src="quentin.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Quentin" width="500" height="333">
-    </div>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Quentin Jefferies is a Loan Officer dedicated to helping prospective homebuyers achieve their lifelong dream of becoming a homeowner. After receiving his Bachelor of Arts degree from the College of  William and Mary, Quentin was inspired by a simple vision; putting the success of others before himself.  
-            <br>
-            His background in finance and public service has led to a unique path that has given him a fresh perspective on the industry.  He began his career working for the Governor of Virginia to develop Virginia’s $107 billion budget and later worked as an apprentice under the Virginia State Treasurer. His selfless service at the state level led him to the Virginia Retirement System pension fund where he performed risk analysis and portfolio optimization techniques on a $70 billion state pension fund for teachers, firefighters, police officers, and state employees. After seeing the needs of the hardworking American people, Quentin wanted to give all people a voice no matter their past or present circumstances. Quentin prides himself on making the mortgage process quick and accessible to all. From people in the most challenging situations to new families hoping to move in, Quentin is passionate about building a platform for people to ahiechve financial freedom.
-            <br>
-            Bringing two distinct backgrounds together in a novel way, Quentin aspires to redefine how his clients achieve the best possible interest rate in particular market conditions.  Quentin understands that buying a home is one of the most important decisions one will make for themselves and their family; and therefore believes it is imperative to connect with the people he is trying to help.
-            <br>
-            Quentin is a licensed loan officer in the states of Georgia and Alabama.  
-            <br>
-            NMLS# 1591420</p>
+  <video autoplay loop id="video-background" muted plays-inline>
+      <source src="intro.mp4" type="video/mp4">
+  </video>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WESTMINSTER <span class="w3-hide-small">MORTGAGE </span>GROUP</span>
     </div>
   </div>
-</div>
 
-<!-- Second Parallax Image with Services Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">SERVICES</span>
-  </div>
-</div>
-
-<!-- Container (Services Section) -->
-<div class="w3-content w3-padding-64" id="services">
-    <p class="w3-center"><em>We have always been on the side of the customer, always suggesting the most appropriate mortgage for you. We have an unparalleled depth of experience within Mortgages for home buyers. All of our brokers and mortgage administrators have worked for several years within major lenders. Consequently we know what is required to get the best result in the quickest possible time.</em></p><br>
-    <div class="w3-row-padding">
-        <div class="w3-third w3-margin-bottom">
-            <div class="w3-card-4 bgimg-6 w3-black" id="w3center">
-                <div class="w3-container">
-                    <span class="w3-center w3-gray w3-wide">Customize your experience.</span>
-                    <span><button class="w3-button w3-block w3-black">TAKE OUR QUIZ</button></span>
-                </div>
-            </div>
+  <div class="w3-container w3-center w3-row-padding w3-padding-32" id="redir">
+    <div class="w3-center w3-dark-gray w3-margin-bottom">
+      <div class="w3-half">
+        <div class="w3-padding-64 w3-dark-gray w3-margin-bottom">
+          <button class="w3-button w3-padding-large w3-wide w3-animate-opacity w3-green w3-xlarge" onclick="moveToQuiz(1)">REFINANCE</button>
         </div>
-        <div class="w3-third w3-margin-bottom">
-            <div class="w3-card-4 bgimg-5 w3-black" id="w3center">
-                <div class="w3-container">
-                    <span class="w3-center w3-gray w3-wide">Calculate your rates.</span>
-                    <span><button class="w3-button w3-block w3-black">CALCULATE</button></span>
-                </div>
-            </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-            <div class="w3-card-4 bgimg-4 w3-black" id="w3center">
-                <div class="w3-container w3-center">
-                    <span class="w3-trans w3-wide">Explore our loan programs.</span>
-                    <span><button class="w3-button w3-block w3-black">LEARN MORE</button></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
       </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <div class="w3-half">
+        <div class="w3-padding-64 w3-dark-gray w3-margin-bottom">
+          <button class="w3-button w3-padding-large w3-wide w3-animate-opacity w3-green w3-xlarge" onclick="moveToQuiz(2)">PURCHASE</button>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-32 w3-center w3-margin-top">
+      <div class="w3-third">
+        <div class="w3-card-2 w3-container w3-light-gray w3-hover-green" style="min-height:460px">
+          <h3>FAST</h3><br>
+          <i class="fa fa-rocket w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <p class="w3-center w3-padding-64 w3-large">We are a licensed Wholesale Lender committed to broker and correspondent lending. We pride ourselves upon finding
+            the best mortgage for you in the shortest possible time, plus making the experience as hassle-free as possible.
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card-2 w3-container w3-light-gray w3-hover-green" style="min-height:460px">
+          <h3>SEASONED</h3><br>
+          <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <p class="w3-center w3-padding-64 w3-large">
+            We are experts in locating the best mortgage for your individual circumstances. We have extensive experience in the Jumbo,
+            Super Jumbo, conforming mortgage, and particularly specialized in niche products.
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card-2 w3-container w3-light-gray w3-hover-green" style="min-height:460px">
+          <h3>INNOVATIVE</h3><br>
+          <i class="fa fa-flask w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <p class="w3-center w3-padding-64 w3-large">
+            We can help you secure a residential mortgage loan, even if you have bad credit history or challenging circumstances. We
+            have always been on the side of the customer, always suggesting the most appropriate mortgage for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Parallax Image with Services Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">SERVICES</span>
+    </div>
+  </div>
+
+  <!-- Container (Services Section) -->
+  <div class="w3-content w3-padding-64 w3-container" id="services">
+    <p class="w3-large">With experience come options. Our highly seasoned employees here at Westminster Mortgage LLC have a long list of work
+        experience at leading financial institutions in the United States. Therefore, finding a solution to your questions
+        no matter how complex is always within our reach. Our firm provides services at speeds faster than any of our competitors
+        whilst providing the intimate feeling that defines what it means to be apart of the Westminster family. Unlike the
+        other giant mortgage companies that come to see their clients as statistics, we see our clients as an integral part
+        of our story. Providing the best rates with lighting fast service is what we do, but being able to make our clients
+        feel at ease and comfortable throughout the process is what we pride ourselves on. With tens of thousands of loans
+        already closed, we invite you to come see what it means to be apart of the Westminster family.</p>
+    <p class="w3-padding-16"><strong>Here are some of the services we offer here at WMG. We've made it convenient for you to do some research of your own. Click the link for details about each loan type or program.</strong></p>
+    <table class="w3-table-all w3-card-4 w3-large w3-hoverable">
+      <tr class="w3-green">
+        <th>Loan Programs</th>
+        <th>Loan Types</th>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Fixed-rate_mortgage">30 Year Fixed Loan Program</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/FHA_insured_loan">FHA Loans</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Fixed-rate_mortgage">15 Year Fixed Loan Program</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Conforming_loan">Coneventional Loans</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Adjustable-rate_mortgage">Adjustable Interest Rate (ARM) Loan Program</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/VA_loan">VA Loans</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Balloon_payment_mortgage">Balloon Loan Program</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Government-backed_loan">Government Loans</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Buydown">Buy Down Loan Program</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Home_equity_loan">Home Equity Loans</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Non-conforming_mortgage">Non-Conventional Loans</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/USDA_home_loan">USDA RHS Loans</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="https://portal.hud.gov/hudportal/HUD?src=/program_offices/public_indian_housing/ih/homeownership/184/faq">Section 184 Indian Home Loan</a></p>
+        </td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Home_Affordable_Refinance_Program">Home Affordable Refinance Program</a></p>
+        </td>
+      </tr>
+      <tr>
+        <tr>
+          <td></td>
+          <td>
+            <p><a href="https://en.wikipedia.org/wiki/Energy_efficient_mortgage">Energy Efficient Mortgage Pilot Program</a></p>
+          </td>
+        </tr>
+        <td></td>
+        <td>
+          <p><a href="https://en.wikipedia.org/wiki/Interest-only_loan">Interest Only Loans</a></p>
+        </td>
+      </tr>
+      <td></td>
+      <td>
+        <p><a href="https://en.wikipedia.org/wiki/Refinancing#No_Closing_Cost">No Closing Cost Loans</a></p>
+      </td>
+      </tr>
+      <td></td>
+      <td>
+        <p><a href="https://en.wikipedia.org/wiki/Cash_out_refinancing">Cash Out Refinance</a></p>
+      </td>
+      </tr>
+      <td></td>
+      <td>
+        <p><a href="https://en.wikipedia.org/wiki/No_doc_loan">No Document Loans
+          </a></p>
+      </td>
+      </tr>
+      <td></td>
+      <td>
+        <p><a href="https://en.wikipedia.org/wiki/Jumbo_mortgage">Jumbo Loan
+          </a></p>
+      </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+      </tr>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+    <div class="w3-center w3-padding-64">
+        <button href="#about" class="w3-button w3-padding-large w3-wide w3-animate-opacity w3-green w3-xlarge w3-margin-right" onclick="moveToQuiz(0)">
+            <i class="fa fa-paper-plane"></i> APPLY NOW
+        </button>
+    </div>
+  </div>
+
+  <div class="w3-padding-32 w3-dark-grey" id="calculate">
+    <h3 class="w3-center">CALCULATE YOUR MORTGAGE RATES</h3>
+    <form class="w3-content w3-card-4 w3-light-grey">
+      <div>
+        <div class="w3-bar w3-black w3-margin-bottom">
+          <button class="w3-bar-item w3-button tablink w3-green" onclick="openCalc(event, 'moncost')">Monthly cost</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openCalc(event, 'maxloan')">Maximum loan</button>
+        </div>
+        <div id="moncost" class="w3-container calc">
+          <div class="w3-row-padding">
+            <div class="w3-third">
+              <label>Mortgage amount</label>
+              <input class="w3-input w3-border" type="number" id="amt" placeholder="100000">
+            </div>
+            <div class="w3-third">
+              <label>Interest rate (%)</label>
+              <input class="w3-input w3-border" type="number" step=".01" id="rate" placeholder="3.92">
+            </div>
+            <div class="w3-third">
+              <label>Mortgage period (years)</label>
+              <input class="w3-input w3-border" type="number" id="period" placeholder="30">
+            </div>
           </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          <div class="w3-row-padding">
+            <div class="w3-half w3-padding-32">
+              <button class="w3-button w3-green w3-section" onclick="mort(document.getElementById('amt').value, document.getElementById('rate').value, document.getElementById('period').value)">
+                  <i class="fa fa-calculator"></i> CALCULATE</button></p>
+            </div>
+            <div class="w3-half" id="mortresults"></div>
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
+        <div id="maxloan" class="w3-container calc" style="display:none">
+          <div class="w3-row-padding">
+            <div class="w3-third">
+              <label>Monthly payments</label>
+              <input class="w3-input w3-border" type="number" id="mon" placeholder="473">
+            </div>
+            <div class="w3-third">
+              <label>Interest rate (%)</label>
+              <input class="w3-input w3-border" type="number" step=".01" id="rate" placeholder="3.92">
+            </div>
+            <div class="w3-third">
+              <label>Mortgage period (years)</label>
+              <input class="w3-input w3-border" type="number" id="period" placeholder="30">
+            </div>
+          </div>
+          <div class="w3-row-padding">
+            <div class="w3-half w3-padding-32">
+              <button class="w3-button w3-green w3-section" onclick="loanmax(document.getElementById('mon').value, document.getElementById('rate').value, document.getElementById('period').value)">
+                  <i class="fa fa-calculator"></i> CALCULATE</button></p>
+            </div>
+            <div class="w3-half" id="monresults"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Second Parallax Image with Services Text -->
+  <div class="bgimg-4 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">ABOUT US</span>
+      </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>CALVIN "VIN" WILKINSON</b></p><br>
+        <img src="calvin.png" class="w3-round w3-image" alt="Photo of Calvin" width="500" height="333">
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>Calvin “Vin” Wilkinson is focused on reclaiming the American Dream, restoring a sense of common purpose, and realizing
+          that no obstacles can withstand the power of millions of voices pursuing their dreams. Calvin studied business
+          at The College of William & Mary where he developed and taught new and innovative ways to optimize home lending.
+          Since then, Calvin Wilkinson’s efficient, fast, and flexible home lending process has been responsible for providing
+          over $1 billion in loans to those pursuing their dreams.
+          <br> Calvin Wilkinson started working in the finance industry just over five years ago.As a young man out of school,
+          Calvin was motivated by a single, simple, powerful, idea – that he might play a small part in building a better
+          American Dream.
+          <br> In pursuit of his mission, Calvin rebuilt neighborhoods destroyed by economic downturn and erected homes in
+          cities famous for being among the most prestigious in the world. It was through these experiences that he saw all
+          that is America converge – farmers and teachers, businessmen and laborers, doctors and lawyers, all of them with
+          a story to tell, all of them seeking a seat at the table, all of them seeking the American Dream. After a time,
+          he began to understand that our cherished desire to live the American Dream depended on the active participation
+          of awakened professionals. It was with these ideologies and principles in mind that he ascended as a leading voice
+          in the finance industry.
+          <br> Join Calvin to take up the unfinished business of perfecting your American Dream. If you will join him in
+          this quest and share his vision that the time is now to shake off our slumber and fear, then we will build a better
+          American Dream for ourselves and future generations. Calvin is ready to take up the cause, and march with you.
+          Together, starting today, let us finish the work that needs to be done, and usher in a new birth of freedom in
+          your life.
+          <br> Calvin is a licensed loan officer in the states of Georgia, Alabama, Florida, Colorado, and Texas.
+          <br> NMLS# 1587533</p>
+      </div>
+    </div>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>QUENTIN JEFFERIES</b></p><br>
+        <img src="quentin.jpg" class="w3-round w3-image" alt="Photo of Quentin" width="500" height="333">
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>Quentin Jefferies is a Loan Officer dedicated to helping prospective homebuyers achieve their lifelong dream of becoming
+          a homeowner. After receiving his Bachelor of Arts degree from the College of William and Mary, Quentin was inspired
+          by a simple vision; putting the success of others before himself.
+          <br> His background in finance and public service has led to a unique path that has given him a fresh perspective
+          on the industry. He began his career working for the Governor of Virginia to develop Virginia’s $107 billion budget
+          and later worked as an apprentice under the Virginia State Treasurer. His selfless service at the state level led
+          him to the Virginia Retirement System pension fund where he performed risk analysis and portfolio optimization
+          techniques on a $70 billion state pension fund for teachers, firefighters, police officers, and state employees.
+          After seeing the needs of the hardworking American people, Quentin wanted to give all people a voice no matter
+          their past or present circumstances. Quentin prides himself on making the mortgage process quick and accessible
+          to all. From people in the most challenging situations to new families hoping to move in, Quentin is passionate
+          about building a platform for people to ahiechve financial freedom.
+          <br> Bringing two distinct backgrounds together in a novel way, Quentin aspires to redefine how his clients achieve
+          the best possible interest rate in particular market conditions. Quentin understands that buying a home is one
+          of the most important decisions one will make for themselves and their family; and therefore believes it is imperative
+          to connect with the people he is trying to help.
+          <br> Quentin is a licensed loan officer in the states of Georgia and Alabama.
+          <br> NMLS# 1591420</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT US</span>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-container w3-padding-32" id="contact">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+      <p>We would love to hear from you</p>
+      <form action="/action_page.php" target="_blank">
+        <input class="w3-input" type="text" placeholder="Name" required name="Name">
+        <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+        <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
+        <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+        <button class="w3-button w3-green w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </form>
     </div>
+  
+  <!-- Google Map -->
+  <div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+  <div class="w3-padding-64 w3-center" >
+      <a href="https://www.facebook.com/WMMortgageGroup/?ref=aymt_homepage_panel" class="w3-button w3-xxlarge"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <a href="https://www.instagram.com/westminstermg/" class="w3-button w3-xxlarge"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+      <a href="https://twitter.com/WestminsterMG" class="w3-button w3-xxlarge"><i class="fa fa-twitter w3-hover-opacity"></i></a>
   </div>
-</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
- 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <div class="w3-tooltip ">
+      <span class="w3-text w3-theme-light w3-padding">Go To Top</span>
+      <a class="w3-text-white" href="#home"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+    <div class="w3-container w3-justify w3-padding-64">
+      <h3>DISCLAIMER</h3>
+      <p class="w3-justify">This web site and the information it contains are provided as a service by Westminster Mortgage, LLC to assist those
+        who have questions or concerns about purchasing a home and available mortgage products. Westminster Mortgage Group
+        is a partnership with Westminster Mortgage LLC (office number: 770-898-0030). Our web site has links to sites we
+        feel might be useful to you and which may provide services. When you link to another site, you are no longer on our
+        site and are subject to the privacy policy of the new site. Westminster Mortgage LLC accepts no responsibility for
+        the content or accessibility of the external websites or external documents linked to on this website. Readers are
+        encouraged to research and verify information contained herein. The information on this website is not intended to
+        substitute for advice from professional credit counselors or legal counsel. Westminster Mortgage, LLC cannot and
+        does not provide legal advice to members of the public. The listing of an organization does not necessarily represent
+        sponsorship or endorsement of the information or organization by Westminster Mortgage, LLC.</p>
+      <h4>NMLS #1502499 | GA LICENSE #51480 | AL LICENSE #MC 22324 | FL LICENSE #MLD1477</h4>
+      <a href="terms.html">TERMS AND CONDITIONS</a><br>
+      <a href="privacy.html">PRIVACY POLICY</a>
+    </div>
+  </footer>
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
+  <!-- Add Google Maps -->
+  <script>
+    function myMap() {
+      myCenter = new google.maps.LatLng(33.862100, -84.687900);
+      var mapOptions = {
+        center: myCenter,
+        zoom: 12,
+        scrollwheel: false,
+        draggable: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
+    }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    function openCalc(evt, calcName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("calc");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+      }
+      document.getElementById(calcName).style.display = "block";
+      evt.currentTarget.className += " w3-green";
+    }
+
+    function mort(amount, rate, period) {
+      var i = (rate) / 100 / 12;
+      var n = period * 12;
+      var p = amount;
+      var c = p * i * (Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
+      var t = c * n;
+
+      var cOut = Math.round(c * 100) / 100;
+      var tOut = Math.round(t * 100) / 100;
+
+      document.getElementById('mortresults').innerHTML =
+        "<div><p>TOTAL COST: " + tOut +
+        "</p></div><div><p>MONTHLY PAYMENTS: " + cOut +
+        "</p></div>";
+    }
+
+    function loanmax(mon, rate, period) {
+      var i = (rate) / 100 / 12;
+      var n = period * 12;
+      var p = mon * (Math.pow(1 + i, n) - 1) / (i * (Math.pow(1 + i, n)));
+      var t = mon * n;
+
+      var pOut = Math.round(p * 100) / 100;
+      var tOut = Math.round(t * 100) / 100;
+
+      document.getElementById('monresults').innerHTML =
+        "<div><p>TOTAL COST: " + tOut +
+        "</p></div><div><p>YOU CAN BORROW: " + pOut +
+        "</p></div>";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function () {
+      myFunction()
+    };
+
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
+      } else {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+      }
     }
-}
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else {
+      } else {
         x.className = x.className.replace(" w3-show", "");
+      }
     }
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
+
+    function moveToQuiz(index) {
+      if(index == 0) {
+        window.location.assign("mainQuiz.html");
+      }
+      else if (index == 1) {
+        window.location.assign("refinance.html");
+      }
+      else {
+        window.location.assign("purchase.html");
+      }
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFx7UI5T_cJ-yYpiEVmg8LEbo2SU6eVd4&callback=myMap"></script>
+  <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
 </body>
+
 </html>
