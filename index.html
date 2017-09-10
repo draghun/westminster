@@ -290,11 +290,11 @@
 
   <div class="w3-padding-32 w3-dark-grey" id="calculate">
     <h3 class="w3-center">CALCULATE YOUR MORTGAGE RATES</h3>
-    <form class="w3-content w3-card-4 w3-light-grey">
+    <form action="mailto:westminstermmg@gmail.com" method="post" enctype="text/plain" class="w3-content w3-card-4 w3-light-grey">
       <div>
         <div class="w3-bar w3-black w3-margin-bottom">
-          <button class="w3-bar-item w3-button tablink w3-green" onclick="openCalc(event, 'moncost')">Monthly cost</button>
-          <button class="w3-bar-item w3-button tablink" onclick="openCalc(event, 'maxloan')">Maximum loan</button>
+          <button class="w3-bar-item w3-button tablink w3-green" onclick="openCalc(event, 'moncost'); return false;">Monthly cost</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openCalc(event, 'maxloan'); return false;">Maximum loan</button>
         </div>
         <div id="moncost" class="w3-container calc">
           <div class="w3-row-padding">
@@ -313,7 +313,7 @@
           </div>
           <div class="w3-row-padding">
             <div class="w3-half w3-padding-32">
-              <button class="w3-button w3-green w3-section" onclick="mort(document.getElementById('amt').value, document.getElementById('rate').value, document.getElementById('period').value)">
+              <button class="w3-button w3-green w3-section" onclick="mort(document.getElementById('amt').value, document.getElementById('rate').value, document.getElementById('period').value); return false;">
                   <i class="fa fa-calculator"></i> CALCULATE</button></p>
             </div>
             <div class="w3-half" id="mortresults"></div>
@@ -336,7 +336,7 @@
           </div>
           <div class="w3-row-padding">
             <div class="w3-half w3-padding-32">
-              <button class="w3-button w3-green w3-section" onclick="loanmax(document.getElementById('mon').value, document.getElementById('rate').value, document.getElementById('period').value)">
+              <button class="w3-button w3-green w3-section" onclick="loanmax(document.getElementById('mon').value, document.getElementById('rate').value, document.getElementById('period').value);return false;">
                   <i class="fa fa-calculator"></i> CALCULATE</button></p>
             </div>
             <div class="w3-half" id="monresults"></div>
@@ -439,7 +439,7 @@
   <div class="w3-container w3-padding-32" id="contact">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
       <p>We would love to hear from you</p>
-      <form action="/action_page.php" target="_blank">
+      <form action="mailto:westminstermmg@gmail.com" method="post" enctype="text/plain">
         <input class="w3-input" type="text" placeholder="Name" required name="Name">
         <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
         <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
@@ -457,6 +457,9 @@
       <a href="https://www.facebook.com/WMMortgageGroup/?ref=aymt_homepage_panel" class="w3-button w3-xxlarge"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
       <a href="https://www.instagram.com/westminstermg/" class="w3-button w3-xxlarge"><i class="fa fa-instagram w3-hover-opacity"></i></a>
       <a href="https://twitter.com/WestminsterMG" class="w3-button w3-xxlarge"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      <p><i class="fa fa-map-marker"></i> 3300 Cumberland Blvd SE, Suite 500 Atlanta, Georgia, 30339</p>
+      <p><i class="fa fa-phone"></i> 770 656 9593</p>
+      <p>NLMS# 1502499</p>
   </div>
 
   <!-- Footer -->
@@ -481,15 +484,16 @@
       <h4>NMLS #1502499 | GA LICENSE #51480 | AL LICENSE #MC 22324 | FL LICENSE #MLD1477</h4>
       <a href="terms.html">TERMS AND CONDITIONS</a><br>
       <a href="privacy.html">PRIVACY POLICY</a>
+      <img />
     </div>
   </footer>
 
   <!-- Add Google Maps -->
   <script>
     function myMap() {
-      myCenter = new google.maps.LatLng(33.862100, -84.687900);
+      georgia = new google.maps.LatLng(33.875536, -84.459455);
       var mapOptions = {
-        center: myCenter,
+        center: georgia,
         zoom: 12,
         scrollwheel: false,
         draggable: false,
@@ -498,7 +502,7 @@
       var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
       var marker = new google.maps.Marker({
-        position: myCenter,
+        position: georgia,
       });
       marker.setMap(map);
     }
@@ -592,7 +596,7 @@
       }
     }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFx7UI5T_cJ-yYpiEVmg8LEbo2SU6eVd4&callback=myMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqutgOpjq1_yXVgiR6kfdW4NFXzHIVHTM&callback=myMap"></script>
   <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
